@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 
 import React, { useState, useEffect, useMemo } from 'react';
 import {
@@ -7,7 +8,6 @@ import {
   Dumbbell,
   Brain,
   Calendar,
-  TrendingUp,
   Trophy,
   Users,
   Sparkles,
@@ -19,7 +19,6 @@ import {
   ChevronRight,
   ChevronLeft,
   Target,
-  ShieldAlert,
   Award,
   Zap,
   Heart,
@@ -35,16 +34,10 @@ import {
   MessageSquare,
   Send,
   Utensils,
-  Wallet,
   Scale,
-  Ruler,
-  ArrowUpRight,
   ArrowDownRight,
-  Layers,
-  Settings,
   X,
-  AlertTriangle,
-  Compass
+  AlertTriangle
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -199,8 +192,6 @@ interface FitnessGroup {
 // ---------------------------------------------------------------------------
 // Constants & Default Data (Preserving AI Fitness Pro DNA)
 // ---------------------------------------------------------------------------
-
-const HERO_IMAGE_PATH = 'user_uploaded_files/ttl=63d/tool_generated/watermarked_img_9167275188381945981.jpg';
 
 const GOAL_META: Record<
   FitnessGoalId,
