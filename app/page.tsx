@@ -768,21 +768,32 @@ const INITIAL_GROUPS: FitnessGroup[] = [
   }
 ];
 
-const WEEKLY_ACTIVITY_DATA = [
-  { day: 'T2', calories: 320, targetCalories: 350, duration: 30, steps: 7800 },
-  { day: 'T3', calories: 410, targetCalories: 350, duration: 35, steps: 8400 },
-  { day: 'T4', calories: 210, targetCalories: 250, duration: 20, steps: 6900 },
-  { day: 'T5', calories: 320, targetCalories: 350, duration: 30, steps: 7450 },
-  { day: 'T6', calories: 0, targetCalories: 380, duration: 0, steps: 4200 },
-  { day: 'T7', calories: 0, targetCalories: 420, duration: 0, steps: 0 },
-  { day: 'CN', calories: 0, targetCalories: 200, duration: 0, steps: 0 }
+interface ActivityChartItem {
+  day: string;
+  label: string;
+  calories: number;
+  targetCalories: number;
+  duration: number;
+  steps: number;
+  workouts: number;
+  completion: number;
+}
+
+const WEEKLY_ACTIVITY_DATA: ActivityChartItem[] = [
+  { day: 'T2', label: 'T2', calories: 320, targetCalories: 350, duration: 30, steps: 7800, workouts: 1, completion: 100 },
+  { day: 'T3', label: 'T3', calories: 410, targetCalories: 350, duration: 35, steps: 8400, workouts: 1, completion: 100 },
+  { day: 'T4', label: 'T4', calories: 210, targetCalories: 250, duration: 20, steps: 6900, workouts: 1, completion: 100 },
+  { day: 'T5', label: 'T5', calories: 320, targetCalories: 350, duration: 30, steps: 7450, workouts: 1, completion: 100 },
+  { day: 'T6', label: 'T6', calories: 0, targetCalories: 380, duration: 0, steps: 4200, workouts: 0, completion: 0 },
+  { day: 'T7', label: 'T7', calories: 0, targetCalories: 420, duration: 0, steps: 0, workouts: 0, completion: 0 },
+  { day: 'CN', label: 'CN', calories: 0, targetCalories: 200, duration: 0, steps: 0, workouts: 0, completion: 0 }
 ];
 
-const MONTHLY_ACTIVITY_DATA = [
-  { label: 'Tuần 1', calories: 1890, duration: 145, workouts: 4, completion: 85 },
-  { label: 'Tuần 2', calories: 2140, duration: 165, workouts: 5, completion: 92 },
-  { label: 'Tuần 3', calories: 1980, duration: 150, workouts: 4, completion: 88 },
-  { label: 'Tuần 4', calories: 2260, duration: 175, workouts: 5, completion: 96 }
+const MONTHLY_ACTIVITY_DATA: ActivityChartItem[] = [
+  { day: 'Tuần 1', label: 'Tuần 1', calories: 1890, targetCalories: 2000, duration: 145, steps: 52000, workouts: 4, completion: 85 },
+  { day: 'Tuần 2', label: 'Tuần 2', calories: 2140, targetCalories: 2000, duration: 165, steps: 56400, workouts: 5, completion: 92 },
+  { day: 'Tuần 3', label: 'Tuần 3', calories: 1980, targetCalories: 2000, duration: 150, steps: 53900, workouts: 4, completion: 88 },
+  { day: 'Tuần 4', label: 'Tuần 4', calories: 2260, targetCalories: 2000, duration: 175, steps: 58200, workouts: 5, completion: 96 }
 ];
 
 // ---------------------------------------------------------------------------
