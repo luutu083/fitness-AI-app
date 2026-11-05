@@ -909,7 +909,7 @@ function buildPersonalizedRecommendation(profile: UserProfile): AIRecommendation
         ];
 
   return {
-    id: `rec-${Date.now()}`,
+    id: `rec-${profile.goal}-${profile.availableTimeMin}`,
     title: `Lộ trình ${goalInfo.shortLabel} Tối ưu ${profile.availableTimeMin} Phút (${profile.preferredTimeSlot})`,
     suitabilityReason: `Thiết kế dựa trên thông số bạn cung cấp (${profile.heightCm}cm, ${profile.weightKg}kg — BMI ước tính ${bmi}), quỹ thời gian ${profile.availableTimeMin} phút/ngày ở trình độ ${EXPERIENCE_META[profile.experience].badge}${
       profile.limitations ? ` và lưu ý "${profile.limitations}"` : ''
